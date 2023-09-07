@@ -1,38 +1,10 @@
-# create-svelte
+# Implementing Photoroom API in SveltKit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Hello 👋
+I apologize for the beginner question, but I am struggling to implement the API. I have the image, but I am unsure how to pass it to the API (blob, base64, stream, etc.). I am not familiar with working with images in NodeJS.
 
-## Creating a project
+The documentation shows how to read the image from disk, but my image is coming from the client.
 
-If you're seeing this, you've probably already done this step. Congrats!
+I have attempted two methods - fetching the image from an S3 bucket (preferred method) and from a form with an input file - but neither of them have worked 😂
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Any help would be appreciated. Thank you!
