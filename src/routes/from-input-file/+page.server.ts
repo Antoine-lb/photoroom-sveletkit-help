@@ -12,7 +12,7 @@ export const actions = {
     console.log("file", file);
 
     const formData = new FormData();
-    formData.append("image_file", file, "filename.jpg");
+    formData.append("image_file", file);
     formData.append("format", "png");
     formData.append("size", "preview");
 
@@ -23,8 +23,8 @@ export const actions = {
         Accept: "image/png, application/json",
         "x-api-key": API_KEY,
       },
+      body: formData,
     };
-    options.body = formData;
 
     try {
       const response = await fetch(url, options);
