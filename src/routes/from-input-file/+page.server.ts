@@ -1,10 +1,9 @@
 import axios from "axios";
+import { SECRET_API_KEY } from "$env/static/private";
 
 /** @type {import('./$types').Actions} */
 export const actions = {
   default: async (event) => {
-    const API_KEY = "";
-
     const data = await event.request.formData();
 
     let files = data.getAll("image_file");
@@ -21,16 +20,19 @@ export const actions = {
       method: "POST",
       headers: {
         Accept: "image/png, application/json",
-        "x-api-key": API_KEY,
+        "x-api-key": SECRET_API_KEY,
       },
       body: formData,
     };
 
     try {
-      const response = await fetch(url, options);
-      const data = await response.json();
+      // const response = await fetch(url, options);
+      // const text = await response.text();
 
-      console.log("success", data);
+      return {
+        success: true,
+        img: "text",
+      };
     } catch (error) {
       console.error(error);
     }
